@@ -5,7 +5,7 @@ from vehicles.views import VehicleViewSet, VehicleTypeViewSet
 
 
 router = DefaultRouter()
-router.register('vehicles', VehicleViewSet)
+router.register('vehicles', VehicleViewSet, basename='vehicles')
 router.register('vehicles/type', VehicleTypeViewSet)
 
 urlpatterns = [
