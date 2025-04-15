@@ -86,7 +86,7 @@ WSGI_APPLICATION = 'core.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': BASE_DIR / 'parking_service',
+        'NAME': 'parking_service',
         'USER': 'postgres',
         'PASSWORD': 'temp@0209',
         'HOST': 'parking_db',
@@ -193,3 +193,5 @@ SPECTACULAR_SETTINGS = {
     'DESCRIPTION': 'API para gerenciamento de estacionamento',
     'VERSION': '1.0.0',
 }
+
+CELERY_BROKER_URL = 'amqp://admin:admin@rabbitmq:5672//'
